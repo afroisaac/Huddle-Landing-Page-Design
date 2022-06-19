@@ -1,48 +1,250 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
 :root{
     --primary-color: hsl(322, 100%, 66%);
     --very-pale-cyan: hsl(193, 100%, 96%);
     --very-dark-cyan: hsl(192, 100%, 9%);
     --grayish-blue: hsl(208, 11%, 55%);
+    --site-white: #ffffff;
+    --shadow-white: #f2f2f2;
 }
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Poppins", sans-serif;
+    color: var(--very-dark-cyan);
+}
+
+a{
+    border-radius: 40px;
+    padding: 12px 50px;
+    text-decoration: none;
+}
+
+section{
+    padding: 20px 80px;
+}
+
 body{
     font-family: "Open Sans", "sans-serif";
+    font-size: 18px;
 }
+
 .wrapper{
     background: url("./images/bg-hero-desktop.svg") no-repeat;
     background-color: var(--very-pale-cyan);
 }
+
 header{
     display: flex;
 }
+
 .logo-wrapper, .button-wrapper{
     flex: 1;
-    padding: 40px 80px;
 }
+
+.logo-wrapper a{
+    padding: 0px;
+}
+
 .logo-wrapper a img{
     width: 160px;
 }
+
 .button-wrapper{
-  text-align:right;
+  text-align: right;
 }
+
 .button-wrapper a{
-    padding: 12px 50px;
-    text-decoration: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
     color: var(--very-dark-cyan);
-    background-color: #fff;
+    background-color: var(--site-white);
+    font-weight: 500;
 }
+
 .hero{
-    height: 600px;
     display: flex;
+    padding-top: 60px;
+}
+
+.col-centered{
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-half{
-    flex: 1;
+    width: 50%;
+    display: flex;
+}
+
+.hero-half img{
+    width: 100%;
+    height: auto;
+}
+
+.hero-half-inner{
+    padding: 0px 60px 0px 0px;
+}
+
+.hero-half-inner h1{
+    font-size: 48px;
+    padding-bottom: 20px;
+  
+}
+
+.hero-half-inner p{
+    display: block;
+    padding: 0px 40px 40px 0px;
+    color: var(--very-dark-cyan);
+}
+
+.hero-half-inner a{
+    background-color: var(--primary-color);
+    color: var(--site-white); 
+}
+
+.container{
+    padding-top: 120px;
+    display: flex;
+}
+
+.column{
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 0 var(--shadow-white), 0 4px 20px 0 var(--shadow-white);
+}
+
+.column{
+    padding: 40px 40px 40px 120px;
+}
+
+.col-half{
+    width: 50%;
+    display: flex;
+}
+
+.col-third{
+    width: 33.33%;
+    display: flex;
+}
+
+.col-half img{
+    width: 400px;
+}
+
+.col-right{
+    justify-content: flex-end;
+}
+
+.col-left{
+    justify-content: flex-start;
+}
+
+.text-wrapper-left{
+    padding: 20px 60px 20px 0px;
+}
+
+.text-wrapper-right{
+    padding: 20px 0px 20px 80px;
+}
+
+.text-wrapper-right h2, .text-wrapper-left h2{
+    padding-bottom: 20px;
+}
+
+.text-wrapper-left p, .text-wrapper-right p{
+    color: var(--grayish-blue);
+}
+
+.col-medium{
+    display: flex;
+    padding: 60px 80px;
+    text-align: center;
+    z-index: 4;
+    background-color: var(--site-white);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0 , 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.col-medium-inner h2{
+    padding-bottom: 50px;
+}
+
+.col-medium-inner a{
+    background-color: var(--primary-color);
+    padding: 18px 90px;
+    color: var(--site-white);
+}
+
+footer{
+    margin-top: -100px;
+    background-color: var(--very-dark-cyan);
+    position: relative;
+    z-index: -4;
+    color: var(--very-pale-cyan);
+}
+
+.col-third ul{
+    list-style: none;
+}
+
+.col-third ul li{
+    padding-bottom: 25px;
+    display: block;
+}
+.contacts li{
+    display: flex;
+    border: 1px solid;
+}
+.contacts li a{
+    padding: 0px;
+}
+.contacts li div{
+    border: 1px solid #fff;
+    display: inline-block;
+}
+
+.fa, .fa-brands{
+    color: var(--very-pale-cyan);
+}
+
+.copyright p {
+    text-align: right;
+    font-size: 12px;
+    color: var(--very-pale-cyan);
+}
+
+@media screen and (max-width: 540px){
+    body{
+        font-size: 16px;
+    }
+    a{
+        padding: 8px 40px;
+    }
+    .wrapper{
+        padding: 40px 20px;
+    }
+    .logo-wrapper a img{
+        width: 80px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero-half{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .hero-half-inner{
+        padding: 0px 10px;
+        text-align: center;
+    }
+    .hero-half-inner h1{
+        font-size: 25px;
+    }
+
 }
