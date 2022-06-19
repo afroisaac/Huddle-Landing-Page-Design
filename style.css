@@ -131,6 +131,7 @@ header{
 .col-third{
     width: 33.33%;
     display: flex;
+    flex-direction: column;
 }
 
 .col-half img{
@@ -197,22 +198,46 @@ footer{
     padding-bottom: 25px;
     display: block;
 }
-.contacts li{
-    display: flex;
-    border: 1px solid;
+
+.col-third div{
+    width: 100%;
+    padding: 0px 20px 20px 0px;
 }
-.contacts li a{
+
+.col-third div a{
     padding: 0px;
 }
-.contacts li div{
-    border: 1px solid #fff;
-    display: inline-block;
+
+.col-third div i{
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.col-third div p{
+    overflow: hidden;
+    margin:0px;
 }
 
 .fa, .fa-brands{
     color: var(--very-pale-cyan);
 }
 
+.footer-links{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.links li a{   
+    color: var(--very-pale-cyan);
+}
+.socials{
+    display: flex;
+    justify-content: center;
+}
+.socials li{
+  width: 40px;
+}
 .copyright p {
     text-align: right;
     font-size: 12px;
